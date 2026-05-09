@@ -1,0 +1,118 @@
+/* Button base styles */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  outline: none;
+  padding: 0 20px;
+}
+
+/* Primary Button - Filled with primary color */
+.button--primary {
+  width: 190px;
+  height: 60px;
+  background-color: #7a82eb;
+  border: 2px solid #7a82eb;
+  color: #ffffff;
+}
+
+.button--primary:hover {
+  background-color: #6865d3;
+  border-color: #6865d3;
+  box-shadow: 0 4px 12px rgba(122, 130, 235, 0.3);
+}
+
+.button--primary:active {
+  background-color: #5f5eb5;
+  border-color: #5f5eb5;
+}
+
+.button--primary .button__chevron {
+  width: 13.711px;
+  height: 14.854px;
+}
+
+/* Secondary Button - Outlined with primary color */
+.button--secondary {
+  width: 190px;
+  height: 60px;
+  background-color: #ffffff;
+  border: 2px solid #7a82eb;
+  color: #7a82eb;
+}
+
+.button--secondary:hover {
+  background-color: #f5f6ff;
+  box-shadow: 0 4px 12px rgba(122, 130, 235, 0.2);
+}
+
+.button--secondary:active {
+  background-color: #ececff;
+}
+
+.button--secondary .button__chevron {
+  width: 13.711px;
+  height: 14.854px;
+}
+
+/* Tertiary Button - Text only with underline */
+.button--tertiary {
+  width: auto;
+  height: auto;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: #7a82eb;
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.button--tertiary:hover {
+  opacity: 0.8;
+}
+
+.button--tertiary:active {
+  opacity: 0.6;
+}
+
+.button--tertiary .button__chevron {
+  display: none;
+}
+
+/* Button text styling */
+.button__text {
+  display: inline-block;
+  line-height: 1;
+  padding: 0;
+}
+
+.button__chevron {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .button--primary,
+  .button--secondary {
+    width: 160px;
+    height: 52px;
+    font-size: 16px;
+    padding: 0 16px;
+  }
+
+  .button--tertiary {
+    font-size: 18px;
+  }
+}
