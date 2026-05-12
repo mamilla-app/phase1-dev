@@ -1,13 +1,17 @@
 .splash-screen {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background-color: #7a82eb;
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  padding: 1.5rem 1rem 2rem;
   font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: #ffffff;
   box-sizing: border-box;
@@ -24,13 +28,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 5vw;
   box-sizing: border-box;
   z-index: 100;
 }
 
 .status-time {
-  font-size: 17px;
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
   font-weight: 600;
   font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif;
   color: #000000;
@@ -39,13 +43,13 @@
 
 .status-icons {
   display: flex;
-  gap: 7px;
+  gap: 0.4rem;
   flex: 1;
   justify-content: flex-end;
 }
 
 .status-icon {
-  font-size: 14px;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
   color: #000000;
 }
 
@@ -54,10 +58,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 184.8px;
-  height: 184.8px;
-  margin-bottom: 50px;
-  margin-top: -60px;
+  width: clamp(150px, 30vw, 220px);
+  height: clamp(150px, 30vw, 220px);
+  margin-bottom: clamp(1.5rem, 4vw, 3rem);
+  margin-top: clamp(-2rem, -5vw, -1rem);
 }
 
 .logo {
@@ -71,16 +75,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
   text-align: center;
-  width: 279px;
+  width: min(90%, 320px);
 }
 
 .title {
   font-family: 'Sniglet', cursive, sans-serif;
-  font-size: 56px;
+  font-size: clamp(3rem, 7vw, 5rem);
   font-weight: 400;
-  line-height: normal;
+  line-height: 1.05;
   margin: 0;
   color: #ffffff;
   letter-spacing: 0;
@@ -89,9 +93,9 @@
 
 .subtitle {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0;
   color: #ffffff;
   letter-spacing: 0;
@@ -100,30 +104,36 @@
 /* Home indicator */
 .home-indicator {
   position: absolute;
-  bottom: 8px;
+  bottom: 0.75rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 134px;
+  width: min(40vw, 134px);
   height: 5px;
   background-color: #000000;
   border-radius: 100px;
 }
 
-/* Responsive adjustments for larger screens */
+/* Responsive breakpoints */
 @media (min-width: 768px) {
   .splash-screen {
-    height: 100vh;
-  }
-}
-
-/* Mobile-first responsive design */
-@media (max-width: 480px) {
-  .title {
-    font-size: 48px;
+    padding: 2rem 2rem 2.5rem;
   }
 
   .text-container {
-    width: 90%;
-    max-width: 279px;
+    width: min(70%, 360px);
+  }
+}
+
+@media (max-width: 480px) {
+  .status-bar {
+    padding: 0 1rem;
+  }
+
+  .logo-container {
+    margin-top: -3rem;
+  }
+
+  .text-container {
+    width: 100%;
   }
 }
