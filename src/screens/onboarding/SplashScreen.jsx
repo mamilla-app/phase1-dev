@@ -1,6 +1,6 @@
 import React from 'react';
-import '../screens/SplashScreen.css';
-import mamillaLogo from '../assets/logo.png';
+import './SplashScreen.css';
+import mamillaLogo from '../../assets/logo.png';
 
 export default function SplashScreen() {
   return (
