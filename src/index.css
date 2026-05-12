@@ -10,8 +10,7 @@ body {
 #root {
   width: 390px;
   height: 844px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
   box-shadow: 0 0 40px rgba(0,0,0,0.3);
   border-radius: 40px;
