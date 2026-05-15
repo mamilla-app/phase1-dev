@@ -9,7 +9,7 @@ export default function SplashScreen() {
       <div className="status-bar">
         <div className="status-time">9:41</div>
         <div className="status-icons">
-          <div className="status-icon">📶</div>
+          <div className="status-icon">🛜</div>
           <div className="status-icon">📡</div>
           <div className="status-icon">🔋</div>
         </div>
