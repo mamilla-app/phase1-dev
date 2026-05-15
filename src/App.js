@@ -1,7 +1,7 @@
-import SplashScreen from './screens/SplashScreen';
+import ProgressSample from './screens/ProgressSample';
 
 function App() {
-  return <SplashScreen />;
+  return <ProgressSample />;
 }
 
 export default App;
