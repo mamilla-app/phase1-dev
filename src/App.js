@@ -1,9 +1,7 @@
-/*App.js = the router/controller — it decides which screen to show. 
-This is the one you edit to swap between screens.*/
-import SplashScreen from './screens/onboarding/SplashScreen';
+import ProgressSample from './screens/ProgressSample';
 
 function App() {
-  return <SplashScreen />;
+  return <ProgressSample />;
 }
 
 export default App;
