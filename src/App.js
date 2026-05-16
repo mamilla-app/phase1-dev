@@ -1,11 +1,10 @@
-import { PrimaryButton, SecondaryButton, TertiaryButton } from './components/buttons';
+import { DefaultOptionButton, PrimaryOptionButton } from './components/option-button';
 
 function App() {
   return (
-    <div style={{ padding: '40px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '20px' }}>
-      <SecondaryButton text="Text" />
-      <PrimaryButton text="Text" />
-      <TertiaryButton text="Text" />
+    <div style={{ padding: '40px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <DefaultOptionButton text="Text" />
+      <PrimaryOptionButton text="Text" />
     </div>
   );
 }
