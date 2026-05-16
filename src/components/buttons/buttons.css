@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 20px;
   border: none;
   border-radius: 16px;
   cursor: pointer;
@@ -35,10 +35,6 @@
   border-color: #5f5eb5;
 }
 
-.button--primary .button__chevron {
-  width: 13.711px;
-  height: 14.854px;
-}
 
 /* Secondary Button - Outlined with primary color */
 .button--secondary {
@@ -58,16 +54,12 @@
   background-color: #ececff;
 }
 
-.button--secondary .button__chevron {
-  width: 13.711px;
-  height: 14.854px;
-}
 
 /* Tertiary Button - Text only with underline */
 .button--tertiary {
   width: auto;
-  height: auto;
-  padding: 0;
+  height: 36px;
+  padding: 0 20px;
   background-color: transparent;
   border: none;
   color: #7a82eb;
@@ -100,8 +92,8 @@
 .button__chevron {
   display: inline-block;
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: 13.711px;
+  height: 14.854px;
   color: inherit;
 }
 
