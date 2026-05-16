@@ -2,167 +2,119 @@
   width: 390px;
   height: 844px;
   background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
   overflow: hidden;
-  font-family: 'DM Sans', sans-serif;
-  color: #1f1f1f;
 }
 
-.status-bar {
-  width: 100%;
-  height: 44px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 24px;
-  box-sizing: border-box;
-  flex-shrink: 0;
-}
+/* ── Decorative arcs ── */
 
-.status-time {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.status-icons {
-  display: flex;
-  gap: 6px;
-  font-size: 12px;
-}
-
-.circle {
+.welcome-arc {
   position: absolute;
-  width: 180px;
-  height: 180px;
   pointer-events: none;
-  z-index: 0;
+  width: 260px;
+  height: 251px;
 }
 
-.circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+/* Top-right: curve faces left toward screen center */
+.welcome-arc--top-right {
+  top: 80px;
+  right: -195px;
+  transform: scaleX(-1);
 }
 
-.circle--top-right {
-  top: 40px;
-  right: -40px;
+/* Bottom-left: mirrored, curve faces right toward screen center */
+.welcome-arc--bottom-left {
+  bottom: 145px;
+  left: -195px;
+  transform: scaleX(-1);
 }
 
-.circle--bottom-left {
-  bottom: 180px;
-  left: -40px;
-  transform: rotate(180deg);
-}
+/* ── Vertically centred middle content ── */
 
-.welcome-content {
-  flex: 1;
+.welcome-middle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 47.5px;
+  width: 298px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 0 32px;
-  z-index: 1;
+  gap: 32px;
 }
 
-.greeting-container {
+/* Title row with sparkles */
+.welcome-title-row {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 10px;
 }
 
-.greeting-title {
+.welcome-title {
   font-family: 'Sniglet', cursive;
   font-size: 32px;
   font-weight: 400;
+  color: #1f1f1f;
   margin: 0;
-  color: #1f1f1f;
-}
-
-.spark {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  position: relative;
-}
-
-.spark--left::before,
-.spark--left::after,
-.spark--right::before,
-.spark--right::after {
-  content: '';
-  position: absolute;
-  background: #7a82eb;
-  border-radius: 2px;
-}
-
-.spark--left::before {
-  width: 2px;
-  height: 14px;
-  top: 0;
-  left: 8px;
-  transform: rotate(-30deg);
-}
-
-.spark--left::after {
-  width: 14px;
-  height: 2px;
-  top: 8px;
-  left: 0;
-  transform: rotate(-30deg);
-}
-
-.spark--right::before {
-  width: 2px;
-  height: 14px;
-  top: 0;
-  left: 8px;
-  transform: rotate(30deg);
-}
-
-.spark--right::after {
-  width: 14px;
-  height: 2px;
-  top: 8px;
-  left: 0;
-  transform: rotate(30deg);
-}
-
-.description-text {
-  font-size: 16px;
-  line-height: 1.6;
   text-align: center;
-  color: #1f1f1f;
-  max-width: 280px;
+  white-space: nowrap;
 }
 
-.description-text p {
-  margin: 0 0 8px 0;
-}
-
-.bottom-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 16px 24px 40px;
-  width: 100%;
-  box-sizing: border-box;
-  z-index: 1;
+/* three_things.svg sparkles */
+.welcome-spark {
+  width: 23px;
+  height: 38px;
   flex-shrink: 0;
 }
 
-.home-indicator {
+.welcome-spark--mirrored {
+  transform: scaleX(-1);
+}
+
+/* Body text */
+.welcome-body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1f1f1f;
+  text-align: center;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.welcome-body p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Bottom actions ── */
+
+.welcome-bottom {
   position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Override button for this screen — wider, SemiBold 22px to match Figma */
+.button--primary.welcome-find-out-btn {
+  width: 236px;
+  font-size: 22px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.welcome-home-indicator {
   width: 134px;
   height: 5px;
   background-color: #1f1f1f;
   border-radius: 100px;
+  margin-bottom: 8px;
 }

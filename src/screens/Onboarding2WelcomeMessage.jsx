@@ -1,51 +1,40 @@
 import React from 'react';
 import './Onboarding2WelcomeMessage.css';
 import { PrimaryButton, TertiaryButton } from '../components/buttons';
-import Vector from '../assets/Vector.png';
+import { ReactComponent as VectorArc } from '../assets/Vector.svg';
+import { ReactComponent as ThreeThings } from '../assets/three_things.svg';
 
 export default function Onboarding2WelcomeMessage() {
   return (
     <div className="welcome-screen">
 
-      {/* Status bar */}
-      <div className="status-bar">
-        <div className="status-time">9:41</div>
-        <div className="status-icons">
-          <span>▌▌▌</span>
-          <span>🛜</span>
-          <span>▮</span>
-        </div>
-      </div>
+      {/* Decorative arc — top right */}
+      <VectorArc className="welcome-arc welcome-arc--top-right" preserveAspectRatio="xMidYMid meet" overflow="hidden" />
 
-      {/* Decorative arcs */}
-      <div className="circle circle--top-right">
-        <img src={Vector} alt="" />
-      </div>
-      <div className="circle circle--bottom-left">
-        <img src={Vector} alt="" />
-      </div>
+      {/* Decorative arc — bottom left, mirrored */}
+      <VectorArc className="welcome-arc welcome-arc--bottom-left" preserveAspectRatio="xMidYMid meet" overflow="hidden" />
 
-      {/* Content */}
-      <div className="welcome-content">
-        <div className="greeting-container">
-          <span className="spark spark--left"></span>
-          <h1 className="greeting-title">Hi there!</h1>
-          <span className="spark spark--right"></span>
+      {/* Vertically centred content */}
+      <div className="welcome-middle">
+        <div className="welcome-title-row">
+          <ThreeThings className="welcome-spark" />
+          <h1 className="welcome-title">Hi there!</h1>
+          <ThreeThings className="welcome-spark welcome-spark--mirrored" />
         </div>
 
-        <div className="description-text">
+        <div className="welcome-body">
           <p>At Mamilla we know that while breastfeeding is natural it does not always come naturally</p>
-          <p>That's why we're here to help</p>
+          <p>That&apos;s why we&apos;re here to help</p>
         </div>
       </div>
 
       {/* Bottom actions */}
-      <div className="bottom-actions">
-        <PrimaryButton text="Find out how" onClick={() => {}} />
+      <div className="welcome-bottom">
+        <PrimaryButton text="Find out how" className="welcome-find-out-btn" onClick={() => {}} />
         <TertiaryButton text="Skip intro" onClick={() => {}} />
+        <div className="welcome-home-indicator" />
       </div>
 
-      <div className="home-indicator"></div>
     </div>
   );
 }

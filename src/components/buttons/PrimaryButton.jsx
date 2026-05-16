@@ -2,9 +2,9 @@ import React from 'react';
 import { ReactComponent as ChevronRight } from '../../assets/Chevron-right.svg';
 import './buttons.css';
 
-export default function PrimaryButton({ text = 'Text', onClick }) {
+export default function PrimaryButton({ text = 'Text', onClick, className }) {
   return (
-    <button className="button button--primary" onClick={onClick}>
+    <button className={`button button--primary${className ? ` ${className}` : ''}`} onClick={onClick}>
       <span className="button__text">{text}</span>
       <ChevronRight className="button__chevron" />
     </button>
