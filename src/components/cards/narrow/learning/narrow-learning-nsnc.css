@@ -1,11 +1,11 @@
 .narrow-learning-nsnc {
-  width: 309px;
+  width: 280px;
   border-radius: 16px;
-  border: 1px solid #e8e8f0;
-  background: #fff;
+  border: 1px solid var(--color-primary-2);
+  background: var(--color-app-bg);
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  font-family: sans-serif;
+  font-family: var(--font-primary);
 }
 
 .narrow-learning-nsnc__image-wrapper {
@@ -14,7 +14,7 @@
 
 .narrow-learning-nsnc__image {
   width: 100%;
-  height: 112px;
+  height: 160px;
   object-fit: cover;
   display: block;
 }
@@ -27,8 +27,8 @@
   backdrop-filter: blur(4px);
   border-radius: 20px;
   padding: 3px 10px;
-  font-size: 13px;
-  color: #333;
+  font-size: var(--font-size-xs);
+  color: var(--color-primary-text);
 }
 
 .narrow-learning-nsnc__favorite {
@@ -45,7 +45,6 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #a0a0e0;
 }
 
 .narrow-learning-nsnc__body {
@@ -53,9 +52,9 @@
 }
 
 .narrow-learning-nsnc__title {
-  font-size: 16px;
-  font-weight: 700;
-  color: #1a1a2e;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-text);
   margin: 0 0 6px;
 }
 
@@ -67,8 +66,8 @@
 }
 
 .narrow-learning-nsnc__description {
-  font-size: 14px;
-  color: #666;
+  font-size: var(--font-size-xs);
+  color: var(--color-secondary-text);
   line-height: 1.4;
   margin: 0;
 }
@@ -78,11 +77,11 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 2px solid #a0a0e0;
+  border: 2px solid var(--color-primary-1);
   background: none;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #a0a0e0;
+  color: var(--color-primary-1);
 }

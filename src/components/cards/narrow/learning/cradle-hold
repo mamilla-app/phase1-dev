@@ -2,7 +2,9 @@
   <div class="narrow-learning-nsnc__image-wrapper">
     <img class="narrow-learning-nsnc__image" src="..." alt="Cross Cradle Hold" />
     <span class="narrow-learning-nsnc__badge">~ 5 min.</span>
-    <button class="narrow-learning-nsnc__favorite" aria-label="Save">☆</button>
+    <button class="narrow-learning-nsnc__favorite" aria-label="Save">
+      <img src="/src/assets/Star-primary1-unfilled.svg" alt="" />
+    </button>
   </div>
   <div class="narrow-learning-nsnc__body">
     <h3 class="narrow-learning-nsnc__title">Cross Cradle Hold</h3>
@@ -10,7 +12,9 @@
       <p class="narrow-learning-nsnc__description">
         Beginner-friendly position with excellent head control.
       </p>
-      <button class="narrow-learning-nsnc__play" aria-label="Play">▶</button>
+      <button class="narrow-learning-nsnc__play" aria-label="Play">
+        <img src="/src/assets/Play-primary1.svg" alt="" />
+      </button>
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
-import Onboarding2WelcomeMessage from './screens/Onboarding2WelcomeMessage';
+import CradleHoldScreen from './screens/CradleHoldScreen';
 
 function App() {
-  return <Onboarding2WelcomeMessage />;
+  return <CradleHoldScreen />;
 }
 
 export default App;
